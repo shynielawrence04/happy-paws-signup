@@ -15,31 +15,60 @@
     <div class="pet sad" id="pet">
       <span class="dog" id="dog" aria-hidden="true">🐶</span>
       <div class="caption" id="petCaption">Fill the form to make me happy!</div>
+
+      <!--  Moood meter -->
+      <div class="mood-meter" aria-hidden="true">
+        <div class="mood-track">
+          <div class="mood-fill" id="moodFill"></div>
+        </div>
+        <div class="mood-label" id="moodLabel">Mood: 0%</div>
+      </div>
+
+      <!-- messages -->
+      <div class="encourage" id="encourageText">Tip: Start with your name ✨</div>
     </div>
 
     <h2>🐾 Happy Paws</h2>
     <div class="subtitle">Join us & help a pet find a home</div>
 
+    <!--  Sound toggle -->
+    <div class="sound-row">
+      <label class="sound-toggle">
+        <input type="checkbox" id="soundToggle" checked>
+        🔊 Sounds ON
+      </label>
+    </div>
+
     <form id="regForm">
 
       <div class="field" id="nameField">
         <label for="name">Your Name</label>
-        <input type="text" id="name">
+        <input type="text" id="name" autocomplete="name">
         <span class="check">✔</span>
         <div id="nameError" class="error"></div>
       </div>
 
       <div class="field" id="emailField">
         <label for="email">Email Address</label>
-        <input type="text" id="email">
+        <input type="email" id="email" autocomplete="email">
         <span class="check">✔</span>
         <div id="emailError" class="error"></div>
       </div>
 
       <div class="field" id="passwordField">
         <label for="password">Create Password</label>
-        <input type="password" id="password">
+        <input type="password" id="password" autocomplete="new-password">
         <span class="check">✔</span>
+
+        <!-- 🔐 Password helper tips (HIDDEN unless focused/typing) -->
+        <div class="pass-tips-wrap" id="passTipsWrap">
+          <ul class="pass-tips" id="passTips">
+            <li id="tipLen">❌ At least 6 characters</li>
+            <li id="tipLetter">❌ Contains a letter (A–Z)</li>
+            <li id="tipNumber">❌ Contains a number (0–9)</li>
+          </ul>
+        </div>
+
         <div id="passwordError" class="error"></div>
       </div>
 
@@ -47,7 +76,7 @@
     </form>
   </div>
 
-  <!-- Popup -->
+  <!--Popup -->
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
       <div class="modal-top">🎉🐶🐱</div>
