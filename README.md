@@ -63,9 +63,9 @@ happy-paws/
 
 🌐 Live Demo (Optional)
 
-If GitHub Pages is enabled, the project can be viewed here:
+The project can be viewed here:
 
-https://your-username.github.io/your-repo-name/
+Live link: (https://shynielawrence04.github.io/happy-paws-signup/)
 
 🧠 What I Learned
 
